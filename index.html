@@ -27,36 +27,78 @@
 
     <header class="header">
       <div class="container header-cont">
-        <nav class="header-nav">
-          <a href="./index.html" class="logo-link link">
-            Web<span class="logo-textstudio">Studio</span>
-          </a>
-          <ul class="nav-list list">
-            <li class="nav-list-item">
-              <a class="nav-link link active" href="./index.html">Studio</a>
+        <a href="./index.html" class="logo-link link">
+          Web<span class="logo-textstudio">Studio</span>
+        </a>
+        <div class="menu-container js-menu-container" id="mobile-menu">
+          <nav class="header-nav">
+            <ul class="nav-list list">
+              <li class="nav-list-item">
+                <a class="nav-link link active" href="./index.html">Studio</a>
+              </li>
+              <li class="nav-list-item">
+                <a class="nav-link link" href="./portfolio.html">Portfolio</a>
+              </li>
+              <li class="nav-list-item">
+                <a class="nav-link link" href="">Contacts</a>
+              </li>
+            </ul>
+          </nav>
+          <address class="address">
+            <ul class="address-list list">
+              <li>
+                <a class="address-link link" href="tel:+110001111111"
+                  >+11 (000) 111-11-11</a
+                >
+              </li>
+              <li>
+                <a class="address-link link" href="mailto:info@devstudio.com"
+                  >info@devstudio.com</a
+                >
+              </li>
+            </ul>
+          </address>
+          <ul class="nav-soclist">
+            <li class="team-soclist-item">
+              <a href="" class="team-soclink"
+                ><svg class="soclink-icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-instagram"></use>
+                </svg>
+              </a>
             </li>
-            <li class="nav-list-item">
-              <a class="nav-link link" href="./portfolio.html">Portfolio</a>
+            <li class="team-soclist-item">
+              <a href="" class="team-soclink"
+                ><svg class="soclink-icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-twitter"></use>
+                </svg>
+              </a>
             </li>
-            <li class="nav-list-item">
-              <a class="nav-link link" href="">Contacts</a>
+            <li class="team-soclist-item">
+              <a href="" class="team-soclink">
+                <svg class="soclink-icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="team-soclist-item">
+              <a href="" class="team-soclink">
+                <svg class="soclink-icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-linkedin"></use>
+                </svg>
+              </a>
             </li>
           </ul>
-        </nav>
-        <address class="address">
-          <ul class="address-list list">
-            <li>
-              <a class="address-link link" href="mailto:info@devstudio.com"
-                >info@devstudio.com</a
-              >
-            </li>
-            <li>
-              <a class="address-link link" href="tel:+110001111111"
-                >+11 (000) 111-11-11</a
-              >
-            </li>
-          </ul>
-        </address>
+        </div>
+
+        <button
+          class="menu-toggle js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg width="30" height="19">
+            <use href="./images/icons.svg#icon-charm_menu-hamburger"></use>
+          </svg>
+        </button>
       </div>
     </header>
 
@@ -75,7 +117,7 @@
       <!-- section 2  methodology 2 -->
 
       <section class="section-mtlg">
-        <div class="container container-mtlg">
+        <div class="container-mtlg">
           <h2 class="methodology visually-hidden">methodology</h2>
           <ul class="mtlg-list list">
             <li class="mtlg-item">
@@ -168,6 +210,10 @@
           <ul class="team-list list">
             <li class="team-card">
               <img
+                srcset="
+                  ./images/Card_photo/photo1.jpg      1x,
+                  ./images/Card_photo/card1x2-min.jpg 2x
+                "
                 src="./images/Card_photo/photo1.jpg"
                 alt="photo Mark Guerrero"
                 width="264"
@@ -210,6 +256,10 @@
             </li>
             <li class="team-card">
               <img
+                srcset="
+                  ./images/Card_photo/photo2.jpg      1x,
+                  ./images/Card_photo/card2x2-min.jpg 2x
+                "
                 src="./images/Card_photo/photo2.jpg"
                 alt="photo Tom Ford"
                 width="264"
@@ -252,6 +302,10 @@
             </li>
             <li class="team-card">
               <img
+                srcset="
+                  ./images/Card_photo/photo3.jpg      1x,
+                  ./images/Card_photo/card3x2-min.jpg 2x
+                "
                 src="./images/Card_photo/photo3.jpg"
                 alt="photo Camilla Garcia"
                 width="264"
@@ -294,6 +348,10 @@
             </li>
             <li class="team-card">
               <img
+                srcset="
+                  ./images/Card_photo/photo4.jpg1x,
+                  ./images/Card_photo/card4x2-min.jpg 2x
+                "
                 src="./images/Card_photo/photo4.jpg"
                 alt="photo Daniel Wilson"
                 width="264"
@@ -393,7 +451,7 @@
 
     <!-- footer -->
 
-    <footer class="footer">
+    <footer class="footer none">
       <div class="container footer-container">
         <div class="logo-text-cnt">
           <a class="footer-logo-link link" href="./index.html"
@@ -533,6 +591,8 @@
         </form>
       </div>
     </div>
+    <div></div>
     <script src="./js/modal.js"></script>
+    <script defer src="js/mobile-menu.js"></script>
   </body>
 </html>
